@@ -86,12 +86,12 @@ exports.testCmd = (rl, id) =>{
 			rl.question(` ${colorize(quiz.question, 'red')}${colorize('?', 'red')} `, resp => {
 				if( resp.toLowerCase().trim() === quiz.answer.toLowerCase().trim() ){
 					log(`Su respuesta es:`);
-					log('Correcta', 'green');
+					biglog('Correcta', 'green');
 					rl.prompt();
 				}
 				else{ 
 					log(`Su respuesta es:`);
-					log('Incorrecta', 'red');
+					biglog('Incorrecta', 'red');
 					rl.prompt();
 				}
 			});
@@ -210,7 +210,7 @@ exports.editCmd = (rl, id) =>{
 exports.creditsCmd = rl =>{
 	log('Autores de la práctica.');
     log('Miguel Lozano Torrequebrada');
-    log('');
+    log('Carlos Gutierrez de la Azuela');
     rl.prompt();
 };
 
